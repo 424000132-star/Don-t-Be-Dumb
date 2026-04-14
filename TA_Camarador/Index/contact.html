@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT | DON'T BE DUMB.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --v-black: #121212; 
+            --v-gray: #fcfcfc; 
+            --v-border: #121212;
+        }
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: var(--v-black); 
+            margin: 0;
+            padding: 0;
+            background-image: url('YOUR_BACKDROP_IMAGE.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; 
+            background-repeat: no-repeat;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(255, 255, 255, 0.85); 
+            z-index: -1;
+        }
+
+        .navbar { 
+            padding: 2rem 0; /* Standardized navbar height */
+            border: 5px solid var(--v-black); /* Standardized border weight */
+            margin: 20px; 
+            background: rgba(255, 255, 255, 0.95) !important; 
+        }
+        
+        .navbar-brand { 
+            font-weight: 800; 
+            font-size: 2.5rem; /* Enlarged Title to match others */
+            letter-spacing: -1px; 
+            text-transform: uppercase; 
+            padding-left: 20px;
+        }
+
+        .nav-item { margin-left: 10px; }
+
+        .nav-link { 
+            font-size: 1.1rem; /* Standardized button font size */
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            border: 3px solid var(--v-black); /* Standardized button border */
+            padding: 15px 30px !important; /* Standardized button size */
+            transition: all 0.3s ease;
+            font-weight: 700;
+            background: #fff;
+            color: var(--v-black) !important;
+        }
+        .nav-link:hover, .nav-link.active { background: var(--v-black); color: #fff !important; }
+
+        .contact-box { 
+            background: rgba(255, 255, 255, 0.9);
+            border: 5px solid var(--v-black); 
+            padding: 50px; 
+            margin-top: 50px; 
+            margin-bottom: 50px;
+        }
+
+        .btn-vantage { 
+            background: var(--v-black); 
+            color: #fff; 
+            border-radius: 0; 
+            width: 100%; 
+            padding: 15px; /* Matched the nav button padding */
+            font-size: 1.1rem; 
+            text-transform: uppercase; 
+            letter-spacing: 2px; 
+            border: 3px solid var(--v-black);
+            transition: 0.3s;
+            font-weight: 700;
+        }
+
+        .btn-vantage:hover { background: #333; color: #fff; }
+
+        .invalid-feedback { font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; }
+
+        footer {
+            border-top: 4px solid var(--v-black);
+            margin: 40px 20px 20px 20px;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            background: white;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <nav class="navbar navbar-expand-lg">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">Don't be dumb.</a>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="collection.html">Collections</a></li>
+
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-6 contact-box">
+
+                <h2 class="fw-light text-center mb-5" style="letter-spacing: 5px;">INQUIRIES</h2>
+
+                
+
+                <form class="needs-validation" novalidate>
+
+                    
+
+                    <div class="mb-4">
+
+                        <input type="text" class="form-control" id="userName" placeholder="FULL NAME (FIRST & LAST)" required pattern=".*\s.*" aria-describedby="nameFeedback">
+
+                        <div id="nameFeedback" class="invalid-feedback">Please enter both your first and last name.</div>
+
+                    </div>
+
+
+
+                    <div class="mb-4">
+
+                        <input type="email" class="form-control" id="userEmail" placeholder="EMAIL (MUST BE .COM)" required pattern=".*@.*\.com$" aria-describedby="emailFeedback">
+
+                        <div id="emailFeedback" class="invalid-feedback">Email must contain '@' and end with '.com'.</div>
+
+                    </div>
+
+
+
+                    <div class="mb-4">
+
+                        <textarea class="form-control" id="userMessage" rows="3" placeholder="MESSAGE" required aria-describedby="msgFeedback"></textarea>
+
+                        <div id="msgFeedback" class="invalid-feedback">Message cannot be empty.</div>
+
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-vantage">Send Message</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <footer>
+
+        &copy; 2026 DON'T BE DUMB. STUDIO — ALL RIGHTS RESERVED | CREATED BY RANIEL PIOLLO CAMARADOR.
+
+    </footer>
+
+
+
+    <script>
+
+        (function () {
+
+            'use strict'
+
+            const forms = document.querySelectorAll('.needs-validation')
+
+
+
+            Array.from(forms).forEach(form => {
+
+                form.addEventListener('submit', event => {
+
+                    const nameInput = document.getElementById('userName');
+
+                    const emailInput = document.getElementById('userEmail');
+
+
+
+                    // Custom logic to set specific browser messages
+
+                    if (nameInput.validity.patternMismatch) {
+
+                        nameInput.setCustomValidity('Please enter both your first and last name.');
+
+                    } else {
+
+                        nameInput.setCustomValidity('');
+
+                    }
+
+
+
+                    if (emailInput.validity.patternMismatch) {
+
+                        emailInput.setCustomValidity('Email must contain "@" and end with ".com"');
+
+                    } else {
+
+                        emailInput.setCustomValidity('');
+
+                    }
+
+
+
+                    if (!form.checkValidity()) {
+
+                        event.preventDefault()
+
+                        event.stopPropagation()
+
+                    }
+
+                    form.classList.add('was-validated')
+
+                }, false)
+
+            })
+
+            document.getElementById('userName').addEventListener('input', function() { this.setCustomValidity(''); });
+
+            document.getElementById('userEmail').addEventListener('input', function() { this.setCustomValidity(''); });
+
+        })()
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
